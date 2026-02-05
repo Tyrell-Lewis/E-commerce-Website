@@ -31,7 +31,7 @@ class Customer(User):
                         password=password)
         #self.favouriteProducts = []
         # self.drills =[]
-        self.profile_pic = "https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255634-stock-illustration-avatar-icon-male-profile-gray.jpg"
+        self.profile_pic = "/static/uploads/profile_pic.png"
 
     
 

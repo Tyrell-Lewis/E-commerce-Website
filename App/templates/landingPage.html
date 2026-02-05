@@ -219,92 +219,11 @@
 {{ super() }}
 
 {%block content%}
-  <section class="banner" data-aos="fade-down" data-aos-duration="800">
-    <!-- <img data-aos="flip-left" data-aos-delay="300" style="border-radius: 10px;margin-top: 0%;"src="https://i.ibb.co/RGj6Jd38/Chat-GPT-Image-May-30-2025-04-20-42-PM.png" alt="Chat-GPT-Image-May-30-2025-04-20-42-PM"> -->
-    <h1>LognShop</h1>
-    <p>At LognShop, we bring log(n) speed and minimalism to e-commerce. Whether you're launching your first product or scaling a full catalog, we make it seamless. Blazing-fast setup, intuitive design, and zero fluff — just everything you need to get your store live, fast.
-
-</p>
-  </section>
-
-    <div class="slider" data-aos="fade-up" data-aos-delay="300">
-      <ul class="slides">
-        <li><img src="/static/landingPageImages/asus.jpg"></li>
-        <li><img src="/static/landingPageImages/background.jpg"></li>
-        <li><img src="/static/landingPageImages/zidane.jpg"></li>
-        <li><img src="/static/landingPageImages/lowHeart.jpg"></li>
-        <li><img src="/static/landingPageImages/Ship2.jpg"></li>
-        <li><img src="/static/landingPageImages/Alien_ship.jpg"></li>
-      </ul>
-      <div class="slider-controls">
-        <button class="slider-btn prev">&#10094;</button>
-        <button class="slider-btn next">&#10095;</button>
-      </div>
-    </div>
-
-  <div class="products-container" data-aos="fade-in" data-aos-delay="600">
-    <div class="row">
-      {% if items %}
-        {% for item in items [:4] %}
-          <div class="col s12 m4 l3">
-            <div class="card">
-              <div class="card-image">
-                <img src="{{ item.picture }}" alt="{{ item.name }}" style="height: 250px; object-fit: cover;">
-                <a href="/product/{{ item.ID }}" class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">info</i></a>
-              </div>
-              <div class="card-content">
-                <span class="card-title">{{ item.name }}</span>
-                <p><strong>Price:</strong> ${{ item.price / 100 }}</p>
-                <P>Item brand: {{item.brand}} </P>
-                <p>{{ item.description[:30] }}{% if item.description|length > 30 %}...{% endif %}</p>
-                <P>Clothing Type: {{item.clothing_type}} </P>
-                <P>Size: {{item.size}} </P>
-              </div>
-              <div class="card-action">
-                <form action="/toggleFavourites/{{ item.ID }}" method="POST" style="display:inline;">
-                  <button type="submit" class="btn-flat" style="padding: 0; margin: 0; background: none; border: none;" title="Toggle Favourites">
-                    {% if item.ID in favourite_ids %}
-                      <i class="fas fa-bookmark blue-text text-darken-2" style="font-size: 24px;"></i>
-                    {% else %}
-                      <i class="far fa-bookmark blue-text text-darken-2" style="font-size: 24px;"></i>
-                    {% endif %}
-                  </button>
-                </form>
-                <a href="/addToCart/{{ item.ID }}" class="btn-small green">Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      {% else %}
-        <p>There are no items</p>
-      {% endif %}
-    </div>
-  </div>
-
+<P> Home page content</P>
 
 {%endblock%}
 
 {% block script %}
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.slider');
-    var instances = M.Slider.init(elems, {
-      indicators: false,
-      height: 600,
-      interval: 4000,
-    });
 
-    const prevBtn = document.querySelector('.slider .prev');
-    const nextBtn = document.querySelector('.slider .next');
-
-    prevBtn.addEventListener('click', () => {
-      instances[0].prev();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      instances[0].next();
-    });
-  });
-</script>
 {% endblock %}

@@ -577,6 +577,7 @@
             >
             <a href="/Home">Home</a>
             <a href="/allProducts">Products</a>
+            <a href="/questions">Questions Page</a>
 
             
     
@@ -603,7 +604,7 @@
 
             <!-- <div class="navbar-tabs"> {%block navbar_tabs%} {%endblock%} </div> -->
 
-            <a href="/Home"><img style="width: 75px; height:75px;padding-top: 30px;" src="/static/landingPageImages/logo.png" alt="LognLogin"></a>
+            <a href="/Home">HOME</a>
 
             <!-- <a href="/contactPage"><div title="Make an icon, and just a page for them to promote their diferent social media accounts" style="padding-right: 20px;"> Social Media/ Contact</div></a>
 
@@ -652,7 +653,7 @@
                         {%if current_user.is_authenticated%}
                         <img src="{{current_user.profile_pic}}" alt="Profile">
                         {%else%}
-                        <img src=" https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255634-stock-illustration-avatar-icon-male-profile-gray.jpg" alt="Profile">
+                        <img src="/static/uploads/profile_pic.png" alt="Profile">
                         {%endif%}
                     </div>
                     
@@ -742,7 +743,7 @@
 
                 <div class="row" style="margin-bottom: 0;">
                 <div class="col s12 m8 center-on-small-only white-text center-align">
-                    © LognShop — All rights reserved.
+                    ©  — All rights reserved.
                 </div>
                 <div class="col s12 m4 right-align">
                     <span class="white-text">Connect with us:</span>

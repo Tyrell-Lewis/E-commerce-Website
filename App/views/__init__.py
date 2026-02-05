@@ -8,8 +8,11 @@ from .settings import settings_views
 from .cart import cart_views
 from .item import item_views
 from .order import order_views
+from .question import question_views
 
 
-views = [index_views, auth_views, customer_views, favourite_views, settings_views, cart_views, item_views, order_views]
+
+
+views = [index_views, auth_views, customer_views, favourite_views, settings_views, cart_views, item_views, order_views, question_views]
 
 # blueprints must be added to this list
